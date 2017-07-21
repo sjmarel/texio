@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    line-height: 1.75;
+    text-rendering: optimizeLegibility;
+
+    transition: .3s ease-in-out;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #576366;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+}
+
+#app {
+    flex: .5;
+    background: #ffffff;
+    overflow: hidden !important;
+}
+
+#app:focus {
+    outline: none;
+}
+
+#editor {
+    height: 400px;
+    padding: 2em 0;
+    background: #ffffff;
+    overflow-y: scroll;
+    /*white-space: pre;*/
+}
+
+#editor:focus {
+    outline: none;
+}
+
+.par {
+    padding: 1em 2em;
+    min-height: 1.75em;
+}
+
+.par:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.par:nth-child(even) {
+    background: #ffffff;
+}
+
+.par[data-focus='true'] {
+    background: #8fffb0;
+}
